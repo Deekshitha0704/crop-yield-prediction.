@@ -1,0 +1,14 @@
+<h2>AI Crop Yield Prediction</h2>
+
+<input type="number" placeholder="Rainfall (mm)" [(ngModel)]="rainfall">
+<input type="number" placeholder="Temperature (°C)" [(ngModel)]="temperature">
+<input type="number" placeholder="Area (hectares)" [(ngModel)]="area">
+
+<select [(ngModel)]="fertilizer">
+  <option [value]="1">Fertilizer Used</option>
+  <option [value]="0">No Fertilizer</option>
+</select>
+
+<button (click)="predict()">Predict Yield</button>
+
+<h3 *ngIf="result">Predicted Yield: {{ result }} tons</h3>
